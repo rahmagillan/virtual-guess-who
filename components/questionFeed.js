@@ -4,10 +4,28 @@ import ListItemText from '@mui/material/ListItemText'
 import { FixedSizeList } from 'react-window'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import IconButton from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton'
 import { Typography } from '@mui/material'
-import { blue } from '@mui/material/colors';
-import { purple } from '@mui/material/colors';
+import { blue } from '@mui/material/colors'
+import { purple } from '@mui/material/colors'
+import { useState } from 'react'
+import TextField from '@mui/material/TextField';
+
+function SubmitVotes(props) {
+    const [question, setQuestion] = useState('')
+     
+    const handleChange = (event) => {
+        setQuestion(event.target.value)
+    }
+
+    return (
+        <div>
+            <TextField>
+
+            </TextField>
+        </div>
+    )
+}
 
 function Votes(props) {
     const votesStyle = {
@@ -44,7 +62,7 @@ export default function QuestionFeed() {
 
     return (
         <Box
-        sx={{ width: '100%', height: 400, maxWidth: 360, bgcolor: 'background.paper' }}
+        sx={{ width: '100%', height: 400, maxWidth: 360 }}
         >
             <FixedSizeList
                 height={400}
