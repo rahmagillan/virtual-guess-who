@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
 
-      <QuestionFeed />
+      <QuestionFeed db={db} />
     </div>
   )
 }
