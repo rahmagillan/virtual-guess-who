@@ -58,38 +58,171 @@ const itemData = [
         flipped: false,
         votes: 0
     },
+    {
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },{
+        img: '/images/eric.JPG',
+        title: 'Best Hackathon',
+        author: 'Votes:',
+        flipped: false,
+        votes: 0
+    },
 ];
 
 export default function GameBoard() {
     return (
-        <ImageList variant="masonry" sx={{ width: 1000, height: 1000}} cols={5} rowHeight={0}>
-            {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                    <Image
-                    src={`${item.img}`}
-                    srcSet={`${item.img}`}
-                    alt={item.title}
-                    width={500}
-                    height={500}
-                    loading="lazy"
-                    />
-
-                <ImageListItemBar
-                        title={item.title}
-                        subtitle={item.author}
-                        actionIcon={
-                        <IconButton
-                            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                            aria-label={`info about ${item.title}`}
-                        >
-                        <InfoIcon />
-                        </IconButton>   
-                    }
-                />
-                </ImageListItem>
-            ))}
-</ImageList>
-
-
-    )
+        <ImageList>
+          <ImageListItem key="Subheader" cols={10}>
+            <ListSubheader component="div">Guess who?</ListSubheader>
+          </ImageListItem>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <Image
+                src={`${item.img}`}
+                srcSet={`${item.img}`}
+                alt={item.title}
+                objectFit='cover'
+                width={500}
+                height={500}
+              />
+              <ImageListItemBar
+                title={item.title}
+                subtitle={item.author}
+                actionIcon={
+                  <IconButton
+                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                    aria-label={`info about ${item.title}`}
+                  >
+                    <InfoIcon />
+                  </IconButton>
+                }
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      );
 }
