@@ -4,7 +4,6 @@ import firebaseConfig from '../utils/firebaseConfig'
 import { getDatabase } from "firebase/database"
 import { initializeApp } from '@firebase/app'
 import QuestionFeed from '../components/questionFeed'
-import GameBoard from '../components/personCard'
 
 export default function Home() {
   const app = initializeApp(firebaseConfig)
@@ -18,8 +17,8 @@ export default function Home() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
-      <GameBoard/>
-      {/* <QuestionFeed /> */}
+
+      <QuestionFeed />
     </div>
   )
 }
